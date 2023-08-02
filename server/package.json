@@ -4,9 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "type": "module",
+ 
   "scripts": {
-    "start": "NODE_OPTIONS='--experimental-specifier-resolution=node' node src/index.js"
+    "start": "node --experimental-specifier-resolution=node src/index.js"
   },
+  
   "dependencies": {
     "bcrypt": "^5.1.0",
     "cors": "^2.8.5",

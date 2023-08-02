@@ -73,6 +73,11 @@ export const CreateRecipe = () => {
           value={recipe.description}
           onChange={handleChange}
         ></textarea>
+
+        {/* // by using react state we can add mulitple ingradiant section in the front end part through SetRecipes function t
+        that is a function of usestate */}
+
+        
         <label htmlFor="ingredients">Ingredients</label>
         {recipe.ingredients.map((ingredient, index) => (
           <input

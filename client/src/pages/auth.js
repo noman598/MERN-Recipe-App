@@ -18,10 +18,10 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const navigate = useNavigate();
+  const navigate = useNavigate(); //used to go on a page that has been set up in code automatically when fun call.
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
+    event.preventDefault(); //used to prevent auto refresh page when we use submit button. 
 
     try {
       const result = await axios.post("http://localhost:3001/auth/login", {
@@ -31,7 +31,7 @@ const Login = () => {
 
       setCookies("access_token", result.data.token);
       window.localStorage.setItem("userID", result.data.userID);
-      navigate("/");
+      navigate("/"); // here 
     } catch (error) {
       console.error(error);
     }
